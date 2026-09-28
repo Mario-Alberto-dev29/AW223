@@ -9,7 +9,8 @@
 <body>
     <HEADER>
         <h1> Mi portafolio</h1>
-        <p> Bienvenido a mi sitio web personal</p>
+        <p id="texto"> Bienvenido a mi sitio web personal</p>
+        <button onclick="cambiartexto()">Cambiar texto</button>
     </HEADER>
         <!-- Aquí comienza la navegación --> 
     <nav>
@@ -24,7 +25,7 @@
         <section class = "seccion-inicio">
             <div class = "seccion-contenido">
                 <h2> Hola, soy Mario Alberto</h2>
-                <p> Soy estudiante de TIID y estoy aprendiendo desarrollo web</p>
+                <p id="presentacion"> Soy estudiante de TIID y estoy aprendiendo desarrollo web</p>
                 <a href="" class="boton"> Ver mis proyectos</a>
             </div>
         </section>
@@ -42,13 +43,17 @@
                 <!-- Sección Habilidades --> 
         <section>
             <h2> Mis habilidades</h2>
-            <ul class="listahabilidades">
-                <li> JAVA</li>
-                <li> Scratch</li>
-                <li> PSint</li>
-                <li> Packet Tracer</li>
-                <li> MySQL</li>
+            <ul id="lista" class="listahabilidades">
+                <li id="1"> JAVA</li>
+                <li id="2"> Scratch</li>
+                <li id="3"> PSint</li>
+                <li id="4"> Packet Tracer</li>
+                <li id="5"> MySQL</li>
             </ul>
+            <div class="listahabilidades">
+            <button onclick="cambiarcolor()">Cambiar color</button>
+            <button onclick="cambiarfuente()">Cambiar fuente de texto</button>
+            </div>
         </section>
                 <!-- Sección sobre mis proyectos --> 
         <section>
@@ -113,7 +118,7 @@
             ></textarea>
           </div>
 
-          <button type="submit">
+          <button onclick = validar()>
             Enviar mensaje
           </button>
 
@@ -127,5 +132,7 @@
         <p> 2026 Mi portafolio web</p>
         <p> Practica de programacion Web todos los derechos reservados </p>
     </footer>
+    <script src="cambios.JS">   
+    </script>
     </body>
 </html>
