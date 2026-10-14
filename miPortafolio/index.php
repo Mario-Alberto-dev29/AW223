@@ -80,7 +80,7 @@
 
         <h2>Contacto</h2>
 
-        <form id="formulario" action="" method="post">
+        <form id="formulario" action="crear_archivo.php" method="post">
 
           <div class="campo">
             <label for="nombre">
@@ -118,7 +118,7 @@
               name="txtmensaje"
               rows="5"
               placeholder="Escribe tu mensaje"
-              requierd
+              required
             ></textarea>
           </div>
 

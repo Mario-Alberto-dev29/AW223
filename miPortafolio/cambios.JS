@@ -1,3 +1,5 @@
+/* 
+
 function cambiartexto(){
 document.getElementById("texto").innerHTML = "Hola, bienvenido a mi portafolio, ahora con JS"
 }
@@ -26,3 +28,4 @@ alert("Datos enviados");
 }
 }
 
+*/
