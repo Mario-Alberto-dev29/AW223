@@ -12,7 +12,7 @@
         <h1> Zona administración</h1>
         <p id="texto"> Formulario para editar</p>
         <a href="admin.php" class="material-symbols-outlined">arrow_back</a>
-        <a href="index.html" class="material-symbols-outlined">home</a>
+        <a href="index.php" class="material-symbols-outlined">home</a>
     </HEADER>
     <section id="contacto">
 

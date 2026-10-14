@@ -11,7 +11,7 @@
     <HEADER>
         <h1> Zona administración</h1>
         <p id="texto"> Mensajes recibidos</p>
-        <a href="index.html" class="material-symbols-outlined">home</a>
+        <a href="index.php" class="material-symbols-outlined">home</a>
     </HEADER>
 <table align="center" border="1" style="width: 80%; margin-top: 20px; border-collapse: collapse;">
     <h1 align="center"> Mensajes recibidos</h1>

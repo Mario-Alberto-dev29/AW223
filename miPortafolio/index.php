@@ -80,7 +80,7 @@
 
         <h2>Contacto</h2>
 
-        <form>
+        <form id="formulario" action="" method="post">
 
           <div class="campo">
             <label for="nombre">
@@ -89,8 +89,9 @@
             <input
               type="text"
               id="nombre"
-              name="nombre"
+              name="txtnombre"
               placeholder="Escribe tu nombre"
+              required
             >
           </div>
 
@@ -101,8 +102,9 @@
             <input
               type="email"
               id="email"
-              name="email"
+              name="txtemail"
               placeholder="ejemplo@correo.com"
+              required
             >
           </div>
 
@@ -113,13 +115,14 @@
 
             <textarea
               id="mensaje"
-              name="mensaje"
+              name="txtmensaje"
               rows="5"
               placeholder="Escribe tu mensaje"
+              requierd
             ></textarea>
           </div>
 
-          <button onclick = validar()>
+          <button type="submit" onclick = validar()>
             Enviar mensaje
           </button>
 
