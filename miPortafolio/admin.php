@@ -11,17 +11,19 @@
     <HEADER>
         <h1> Zona administración</h1>
         <p id="texto"> Mensajes recibidos</p>
-        <a href="index.php" class="material-symbols-outlined">home</a>
     </HEADER>
+    <nav>
+        <a href="index.php" class="material-symbols-outlined">home</a>
+    </nav>
 <table align="center" border="1" style="width: 80%; margin-top: 20px; border-collapse: collapse;">
     <h1 align="center"> Mensajes recibidos</h1>
     <thead>  
     <tr>
-        <th style="background-color: violet; color: white;">Nombre</th>
-        <th style="background-color: violet; color: white;">Correo</th>
-        <th style="background-color: violet; color: white;">Mensaje</th>        
-        <th style="background-color: violet; color: white;">Fecha</th>
-        <th style="background-color: violet; color: white;">Opciones</th>
+        <th style="background-color: purple; color: white;">Nombre</th>
+        <th style="background-color: purple; color: white;">Correo</th>
+        <th style="background-color: purple; color: white;">Mensaje</th>        
+        <th style="background-color: purple; color: white;">Fecha</th>
+        <th style="background-color: purple; color: white;">Opciones</th>
     </tr>  
     </thead>
     <tbody>

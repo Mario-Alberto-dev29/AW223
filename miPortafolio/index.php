@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="stylesheet" href="CSS/estilos.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
     <HEADER>
@@ -14,7 +15,7 @@
     </HEADER>
         <!-- Aquí comienza la navegación --> 
     <nav>
-        <a href=""> Inicio </a>
+        <a href="index.php" class="material-symbols-outlined">home</a>
         <a href=""> Sobre mí </a>
         <a href=""> Habilidades </a>
         <a href=""> Proyecto </a>
