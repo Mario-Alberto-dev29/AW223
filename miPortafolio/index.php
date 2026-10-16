@@ -136,7 +136,9 @@
         <p> 2026 Mi portafolio web</p>
         <p> Practica de programacion Web todos los derechos reservados </p>
     </footer>
-    <script src="cambios.JS">   
+    <script src="cambios.JS">   >
+    </script>
+    <script src="AlertInsert.js">
     </script>
     </body>
 </html>

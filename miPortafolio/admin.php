@@ -15,34 +15,33 @@
     </HEADER>
 <table align="center" border="1" style="width: 80%; margin-top: 20px; border-collapse: collapse;">
     <h1 align="center"> Mensajes recibidos</h1>
+    <thead>  
     <tr>
-        <th style="background-color: violet; color: white;">ID</th>        
         <th style="background-color: violet; color: white;">Nombre</th>
         <th style="background-color: violet; color: white;">Correo</th>
-        <th style="background-color: violet; color: white;">Mensaje</th>
+        <th style="background-color: violet; color: white;">Mensaje</th>        
+        <th style="background-color: violet; color: white;">Fecha</th>
         <th style="background-color: violet; color: white;">Opciones</th>
-    </tr>    
-        <tr>
-        <th style="background-color: white;">1</th>        
-        <th style="background-color: white;">Ana</th>
-        <th style="background-color: white;">ana@example.com</th>
-        <th style="background-color: white;">Hola, me interesa tu portafolio</th>
-        <th style="background-color: white;">
-        <span class="material-symbols-outlined">delete</span>
-        <a href="editar.php" class="material-symbols-outlined">edit</a>
-        </th>
-    </tr>
-    </tr>    
-        <tr>
-        <th style="background-color: white;">1</th>        
-        <th style="background-color: white;">Jose</th>
-        <th style="background-color: white;">jose@example.com</th>
-        <th style="background-color: white;">Quisiera mas informacion sobre tus proyectos</th>
-        <th style="background-color: white;">
-        <span  href="eliminar.php" class="material-symbols-outlined">delete</span>
-        <a href="editar.php" class="material-symbols-outlined">edit</a>
-        </th>
-    </tr>        
+    </tr>  
+    </thead>
+    <tbody>
+        <?php
+        require_once "consulta_mensajes.php";
+        $rsMensajes = consultaMensajes();
+        while($arrMensaje = mysqli_fetch_assoc($rsMensajes)){
+        echo "<tr>
+        <td style='background-color: white;'>".$arrMensaje['nombre']."</td>        
+        <td style='background-color: white;'>".$arrMensaje['correo']."</td>
+        <td style='background-color: white;'>".$arrMensaje['mensaje']."</td>
+        <td style='background-color: white;'>".$arrMensaje['timeStamps']."</td>
+        <td style='background-color: white;'>
+        <span class='material-symbols-outlined'>delete</span>
+        <a href='editar.php' class='material-symbols-outlined'>edit</a>
+        </td>
+        </tr>";
+       }
+    ?>
+    </tbody>      
 </table>
 <p></p>
 <p></p>
