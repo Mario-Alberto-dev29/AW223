@@ -1,4 +1,4 @@
-validar() {
+function validar() {
 
 campo1 = document.getElementById("nombre")
 campo2 = document.getElementById("email")
@@ -10,5 +10,4 @@ if (campo2.value === "" ) {
     alert("El campo email es obligatorio");}
 if (campo3.value === "" ) {
     alert("El campo mensaje es obligatorio");}
-
 }

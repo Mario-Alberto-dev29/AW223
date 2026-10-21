@@ -1,3 +1,9 @@
+<?php
+$nombreviejo = $_GET['nombre'];
+$correoviejo = $_GET['correo'];
+$mensajeviejo = $_GET['mensaje'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +26,15 @@
 
         <h2>Editar mensaje</h2>
 
-        <form>
+        <form id="formulario" action="modificar.php" method="post">
 
-          <div class="campo">
+        <input type="hidden" name="nombreviejo" value="<?= htmlspecialchars($nombreviejo, ENT_QUOTES, 'UTF-8') ?>">
+
+        <input type="hidden" name="correoviejo" value="<?= htmlspecialchars($correoviejo, ENT_QUOTES, 'UTF-8') ?>">
+
+        <input type="hidden" name="mensajeviejo" value="<?= htmlspecialchars($mensajeviejo, ENT_QUOTES, 'UTF-8') ?>">
+
+         <div class="campo">
             <label for="nombre">
               Nombre
             </label>
@@ -31,6 +43,7 @@
               id="nombre"
               name="nombre"
               placeholder="Escribe tu nombre"
+              required
             >
           </div>
 
@@ -43,7 +56,8 @@
               id="email"
               name="email"
               placeholder="ejemplo@correo.com"
-            >
+              required
+              >
           </div>
 
           <div class="campo">
@@ -56,21 +70,19 @@
               name="mensaje"
               rows="5"
               placeholder="Escribe tu mensaje"
+              required
             ></textarea>
           </div>
-
-          <button onclick = validar()>
-            Enviar mensaje
+          <button type="submit">
+          Enviar mensaje
           </button>
-
         </form>
-
       </section>
     <footer>  
         <p> 2026 Mi portafolio web</p>
         <p> Practica de programacion Web todos los derechos reservados </p>
     </footer>
-    <script src="cambios.JS">   
+    <script src="consulta_mensajes.JS">   
     </script>
 </body>
 </html>

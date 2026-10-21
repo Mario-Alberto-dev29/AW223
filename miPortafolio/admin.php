@@ -37,8 +37,10 @@
         <td style='background-color: white;'>".$arrMensaje['mensaje']."</td>
         <td style='background-color: white;'>".$arrMensaje['timeStamps']."</td>
         <td style='background-color: white;'>
-        <span class='material-symbols-outlined'>delete</span>
-        <a href='editar.php' class='material-symbols-outlined'>edit</a>
+        <a href='editar.php?nombre=".urlencode($arrMensaje['nombre'])."&correo=".urlencode($arrMensaje['correo'])."&mensaje=".urlencode($arrMensaje['mensaje'])."' 
+        class='material-symbols-outlined'>Edit</a>
+        <a href='eliminar.php?nombre=".urlencode($arrMensaje['nombre'])."&correo=".urlencode($arrMensaje['correo'])."&mensaje=".urlencode($arrMensaje['mensaje'])."' 
+        class='material-symbols-outlined'>Delete</a>
         </td>
         </tr>";
        }

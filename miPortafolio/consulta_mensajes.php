@@ -11,6 +11,5 @@ function consultaMensajes() {
     } catch(Exception $e) {
     die('Algo paso al consultar: ' .$e->getMessage() );
     }
-
-
 }
+
