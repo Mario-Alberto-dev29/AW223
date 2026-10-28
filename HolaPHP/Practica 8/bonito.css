@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f6fa;
+    color: #263445;
+}
+
+.encabezado {
+    background: #173b63;
+    color: white;
+    text-align: center;
+    padding: 28px 16px;
+}
+
+.encabezado h1 {
+    margin-top: 0;
+}
+
+.contenedor {
+    width: 94%;
+    max-width: 1100px;
+    margin: 28px auto;
+    padding: 24px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000012;
+}
+
+h2 {
+    color: #173b63;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.tarjeta {
+    display: block;
+    padding: 18px;
+    background: #eef4fb;
+    border: 1px solid #d5e2f1;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #263445;
+}
+
+.tarjeta:hover {
+    background: #dfeafa;
+}
+
+.tarjeta h3 {
+    color: #173b63;
+}
+
+.formulario {
+    display: grid;
+    gap: 14px;
+    max-width: 700px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #b8c4d1; 
+    border-radius: 6px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button,
+.boton {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #1767a8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+button:hover,
+.boton:hover {
+    background: #1c5889c7;
+}
+
+.secundario {
+    background: #536577;
+}
+
+.navegacion {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.mensaje {
+    padding: 12px;
+    margin: 14px 0;
+    border-radius: 6px;
+    background: #e6f5e9;
+    color: #205b2b;
+}
+
+.error {
+    background: #fdeaea;
+    color: #8b2020;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+    margin-top: 18px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 620px;
+}
+
+th,
+td {
+    border: 1px solid #d7dfe8;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #173b63;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f6f8fb;
+}
+
+footer {
+    text-align: center;
+    padding: 18px;
+    color: #667587;
+}
+
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 16px;
+    }
+
+    .encabezado h1 {
+        font-size: 24px;
+    }
+}
