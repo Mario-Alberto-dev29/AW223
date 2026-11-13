@@ -47,9 +47,10 @@
         <td style='background-color: white;'>".$arrMensaje['pagado']."</td>
         <td style='background-color: white;'>".$arrMensaje['fecha']."</td>
         <td style='background-color: white;'>
-        <a href='estatus.php?id=".urlencode($arrMensaje['id'])."' 
-        class='material-symbols-outlined'>Edit </a>
+        <a href='editar.php?id=".urlencode($arrMensaje['id'])."' 
+        class='material-symbols-outlined'>Book </a>
         </td>
+
         </tr>";
        }
     ?>
