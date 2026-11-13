@@ -12,7 +12,7 @@
     <table align="center" border="1" style="width: 80%; margin-top: 20px; border-collapse: collapse;">
     <h1 align="center"> Control de gastos personales</h1>
     <h1 align="center"> Añadir nuevo gasto </h1>   
-    <form method="POST" action="registrar.php" id="formUsuario">
+    <form align="center" method="POST" action="registrar.php" id="formUsuario">
         <label for="nombre">Concepto:</label>
         <input type="text" id="concepto" name="concepto"
                maxlength="100" required>
