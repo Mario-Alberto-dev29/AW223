@@ -1,0 +1,6 @@
+href='editar.php?id=".urlencode($arrMensaje['id'])."'
+
+        <a href='editar.php?id=".urlencode($arrMensaje['id'])."' 
+        class='material-symbols-outlined'>Book </a>
+
+        <Button href='editar.php?id=".urlencode($arrMensaje['id'])."'>Marcar como pagado </Button>

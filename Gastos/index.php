@@ -54,7 +54,10 @@
         </tr>";
        }
     ?>
+
     </tbody>      
 </table>
 </body>
+    <script src="logica.JS">   
+    </script>
 </html>
