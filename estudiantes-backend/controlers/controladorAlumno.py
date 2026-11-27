@@ -1,23 +1,72 @@
-from flask import Blueprint
+from flask import Blueprint, request, jsonify
+from Models.modelEstudiante import *
 
-controladorAlumnoBP= Blueprint('controladorAlummno',__name__)
+controladorAlumnoBP = Blueprint('controladorAlumno', __name__)
 
+# ruta para arranque del servidor
 @controladorAlumnoBP.route('/')
 def inicio():
-    return "Hello World Flask"
+    return "Hola soy el backend de Alumno"
 
+
+# ruta para insert
 @controladorAlumnoBP.route('/guardarAlumno', methods=['POST'])
 def guardar():
-    return 'Se guardo el alumno'
+    nombreReq = request.form.get('txtNombre', '').strip()
+    carreraReq = request.form.get('txtCarrera', '').strip()
 
-@controladorAlumnoBP.route('/consultatodo', methods=['GET'])
-def consultatodo():
-    return 'Se consulto todo'
+    try:
+        insertEstudiante(nombreReq, carreraReq)
+        return jsonify({"Completado": "estudiante guardado"}), 200
+
+    except Exception as e:
+        return jsonify({"Error": str(e)}), 500
+
+
+# Ruta para consultar alumnos
+@controladorAlumnoBP.route('/consultarAlumnos', methods=['GET'])
+def consultaAll():
+    try:
+        alumnos = selectAll()
+        return jsonify(alumnos), 200
+
+    except Exception as e:
+        print(f"Error: {e}")
+        return jsonify({"Error": str(e)}), 500
+
+
+# Ruta para eliminar un alumno
+@controladorAlumnoBP.route('/eliminarAlumno', methods=['PUT'])
+def borrar():
+    id = request.form.get('id', '').strip()
+
+    try:
+        softDeleteEstudiante(id)
+        return jsonify({"Completado": "Alumno Borrado"}), 200
+
+    except Exception as e:
+        return jsonify({"Error": str(e)}), 500
 
 @controladorAlumnoBP.route('/actualizarAlumno', methods=['PUT'])
 def actualizar():
-    return 'Se actualizo el alumno'
+    nombreReq = request.form.get('txtNombre', '').strip()
+    carreraReq = request.form.get('txtCarrera', '').strip()
+    id = request.form.get('id', '').strip()
 
-@controladorAlumnoBP.route('/eliminarAlumno', methods=['DELETE'])
-def elimiar():
-    return 'Se elimino el alumno'
+    try:
+        actualizarEstudiante(id, nombreReq, carreraReq)
+        return jsonify({"Completado": "Alumno Actualizado"}), 200
+
+    except Exception as e:
+        return jsonify({"Error": str(e)}), 500
+
+@controladorAlumnoBP.route('/consultarAlumnosId', methods=['GET'])
+def consultaid():
+    id = request.form.get('id', '').strip()
+    try:
+        alumno = selectid(id)
+        return jsonify(alumno), 200
+
+    except Exception as e:
+        print(f"Error: {e}")
+        return jsonify({"Error": str(e)}), 500
